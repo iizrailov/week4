@@ -29,15 +29,21 @@ window.getDeck = function() {
 }
 // END DO NOT CHANGE CODE
 
+var getRandomInt = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 $(function() {
     $(".deal").on("click", function(event) {
       event.preventDefault()
 
-    $("#c1").attr("src", "http://golearntocode.com/images/cards/5_of_diamonds.png")
-    $("#c2").attr("src", "http://golearntocode.com/images/cards/6_of_diamonds.png")
-    $("#c3").attr("src", "http://golearntocode.com/images/cards/7_of_diamonds.png")
-    $("#c4").attr("src", "http://golearntocode.com/images/cards/8_of_diamonds.png")
-    $("#c5").attr("src", "http://golearntocode.com/images/cards/9_of_diamonds.png")
+      //  window.getDeck()[2] - this is the array we need to pull from to get a random number / suit
+
+    $("#c1").attr("src", "http://golearntocode.com/images/cards/" + getDeck()[getRandomInt(0,51)] +'.png')
+    $("#c2").attr("src", "http://golearntocode.com/images/cards/" + getDeck()[getRandomInt(0,51)] +'.png')
+    $("#c3").attr("src", "http://golearntocode.com/images/cards/" + getDeck()[getRandomInt(0,51)] +'.png')
+    $("#c4").attr("src", "http://golearntocode.com/images/cards/" + getDeck()[getRandomInt(0,51)] +'.png')
+    $("#c5").attr("src", "http://golearntocode.com/images/cards/" + getDeck()[getRandomInt(0,51)] +'.png')
 
 
 
